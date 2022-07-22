@@ -13,7 +13,8 @@ soup = BeautifulSoup(result.content, "html.parser")
 # Finds the role="alert" specific to expired jobs
 results = soup.find(role="alert")
 
-
+# Prints the HTML code encapsulating the match if found
+# Other function can be run here
 print(results.prettify())
 
 job_elements = results.find_all("div", class_="icl-Alert-headline")
